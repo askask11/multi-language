@@ -32,7 +32,10 @@ class MultiLanguage
         //this.localizedArr = [];
         this.registeredSelect = [];
         this.checkUserLanguage();
-        this.registerSelect(select);
+        if(select!==null)
+        {
+            this.registerSelect(select);
+        }
         
         this.translate(this.externalJSON,this.getUserLanguage());
     }
