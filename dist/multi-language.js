@@ -34,7 +34,7 @@ class MultiLanguage
         this.checkUserLanguage();
         this.registerSelect(select);
         
-        this.translate(this.getUserLanguage());
+        this.translate(this.externalJSON,this.getUserLanguage());
     }
    
     /**
@@ -73,16 +73,16 @@ class MultiLanguage
      * @param {type} target
      * @returns {undefined}
      */
-    translate(target)
+    translate(json,target)
     {
         //save language preference
         this.setUserLanguage(target);
         //go through all elements
         //
-        for(var i=0, max = this.externalJSON.length; i<max;i++)
+        for(var i=0, max = json.length; i<max;i++)
         {
             //get the element to be translated
-            var eleJSON = this.externalJSON[i];
+            var eleJSON = json[i];
             var ele = document.getElementById(eleJSON["id"]);
             if(ele!==null)
             {
@@ -152,6 +152,12 @@ class MultiLanguage
     setUserLanguage(target)
     {
         localStorage.setItem("preferred-language", target);
+    }
+    
+    addSheet(json)
+    {
+        this.translate(json,this.getUserLanguage());
+        this.externalJSON.concat(json);
     }
 }
 
