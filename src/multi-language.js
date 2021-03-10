@@ -52,7 +52,8 @@ class MultiLanguage
             var l = this.getUserLanguage();
             this.makeSelect(select, l);
             select.addEventListener("change", (e) => {
-                this.translate(select.value);
+                this.translate(this.externalJSON,select.value);
+                //console.log(this);
             });
         }
         this.registeredSelect[this.registeredSelect.length] = select;
@@ -159,9 +160,9 @@ class MultiLanguage
     
     addSheet(json)
     {
+        this.externalJSON = this.externalJSON.concat(json);
+        
         this.translate(json,this.getUserLanguage());
-        this.externalJSON.concat(json);
     }
 }
-
 
