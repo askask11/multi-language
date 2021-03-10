@@ -93,7 +93,7 @@ You may wrap your text with <code>span</code> element. For example,
 
 A translation sheet is a JSON Array containing the element IDs of the document and their respective inner texts in different languages.
 This library will read the translation sheet and apply it to the document accordingly.  
-You may write the sheet in an external JSON file, or write it in a tag like ```<script id="translation-sheet" type="application/json">**YOUR TRANSLATION SHEET GOES HERE**</script>``` in the ```<head>``` of the HTML page to be translated.   
+You may write the sheet in an external JSON file, or write it in a tag like ```<script id="translation-sheet" type="application/json">**YOUR TRANSLATION SHEET GOES HERE**</script>``` in the HTML page to be translated.   Write it before the script activation.
   
 Structure of the translation sheet:  
 A translation sheet is a JSON Array composed of multiple JSON Objects, and each them represents one element to be translated.  
@@ -233,9 +233,8 @@ Example JSON Translation sheet:
         "vi":"alert('Chúc bạn ngày mới tốt lành');"
       }
     }
-  },
-  {...},
-  {...},
+  }
+]
   
 ```
 
