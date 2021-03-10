@@ -330,6 +330,9 @@ Add a new select to the binding list. This select will also be able to control t
 |------|------|------|------|------|
 |select|<code>Element</code>|Yes|N/A|The <code>Element</code> object of the select|
 
+### Example
+Find example.html in the root of the repo.
+
 ## About Author
 Jianqing Gao <br>
 Contact: vip@jianqinggao.com
