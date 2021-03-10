@@ -242,21 +242,21 @@ Example JSON Translation sheet:
 ### 4. Construct a MultiLanguage instance
 
 To activate translation feature on your website, you must construct a translator at the buttom of your HTML <code>body</code>.
-The constructor of class MultiLanguage accepts 3 parameters, two of them is required.
+The constructor of class MultiLanguage accepts 3 parameters, none of them is required.
 ```
-var translator = new MultiLanguage(defaultLanguage, externalJSON(Optional), select(Optional));
+var translator = new MultiLanguage(defaultLanguage(Optional), externalJSON(Optional), select(Optional));
 ```
 |Sequence|Name|Datatype|Required|Default Value|Description|
 |-----|-----|---|-----|-----|-----|
-|1|defaultLanguage|String|Yes|N/A|The default language for a user that has not defined any language preferences. This language must be available across ALL elements|
-|2|externalJSON|JSONArray|No|<code>[]</code>|The translation sheet to load into the translator. The translator will load an empty array by default. You may load multiple sheets after it is constructed by calling method ```addSheet(translationSheet)```|
+|1|defaultLanguage|```String```|No|<code>en</code>|The default language for a user that has not defined any language preferences. This language must be available across ALL elements. You must assign a value here if the default language code is not "en".|
+|2|externalJSON|```JSONArray```|No|<code>[]</code>|The translation sheet to load into the translator. The translator will load an empty array by default. You may load multiple sheets after it is constructed by calling method ```addSheet(translationSheet)```|
 |3|select|<code>Element</code>|No|<code>null</code>|An ```<select>``` element that has options containing supported languages. The current language will be changed to the <code>value</code> attribute of the ```<option>``` selected. You may register multiple selects later by calling method ```registerSelect(select)```|
 
 ### 5. Load translation sheet into the instance
-To load an external sheet file to the element without dependency, you may follow this example:
+To load an external sheet file to the element, you can follow this example:
 ```
 var xhr = new XMLHttpRequest();  //Create an xhr instance
-var translator = null; // define translator
+var translator = new MultiLanguage(); // define translator, create a default instance
 
 xhr.open("***LINK TO YOUR SHEET.json***","***HTTP METHOD TO USE***"); // Define target file and HTTP method to use.
 
@@ -264,16 +264,75 @@ xhr.onreadystatechange=(e)=>{
   if(xhr.readyState === 4 && xhr.status === 200)
   {
     var jsonResponse = JSON.parse(xhr.responseText); // get response text and parse it into JSON.
-    translator = new MultiLanguage("***DEFAULT LANGUAGE***",jsonResponse);
+    translator.addSheet(jsonResponse);
   }
 }
+```
+If you have written your translation sheet inside your HTML, you may follow this example
+```
+var json = JSON.parse(document.getElementById("translation-sheet").innerHTML);
+var translator = new MultiLanguage("en",json);
+```
+You may repeat the steps above to load multiple sheets, but you may NOT load the same sheet more than once.
+### 6. Register Select Elements
+You can let user control the page language by defining a ```<select>``` element in your page. Then, register the ```<select>``` to the translator or pass the ```Element``` object of that select to the constructor. You may call function ```translate(language)``` manually too.  
+Example HTML Select
+```
+<select id="languages">
+  <option value="en">
+  English (Default)
+  </option>
+  <option value="zh">
+  简体中文
+  </option>
+</select>
+```
+To Register(bind) this select to the translator instance:
+```
+var translator = new MultiLanguage(select=document.getElementById("languages")); // you may pass it to the constructor 
+```
+or
+```
+var translator = new MultiLanguage();
+translator.registerSelect(document.getElementById("languages")) // You may call method "registerSelect" to register it
+```
+Call the method above again, you may register multiple select elements. You may NOT register the same element more than once.   
+The register select element can control the global language settings, and will change accordingly when the language setting changes.
+
+### Congratulations! Your website can speak multiple languages now!
+
+
+## Functions Reference Sheet
 
 ```
+translate(json=this.externalJSON, target)
+```
+Translate all the elements on the translation sheet to target language. This will trigger all registered selects to select the "target" language.
+|Parameter|Datatype|Required|Default Value|Description|
+|------|------|------|------|------|
+|json|JSONArray|No|```this.externalJSON```|The translation sheet to run. By default, it will run the translaton sheet stored with the instance. Please call ```addSheet``` to add additional translation sheets.|
+|target|```String```|Yes|N/A|The target language code to translate to. If the language is not defined for a specifit element, the element or its attribute will be translated to the default language| 
 
+***   
+```
+addSheet(jsonArray)
+```
+Add an additional sheet to the multilanguage translator. The sheet will be concatnated to the sheet added before. If there are duplicated entries, the one added later will override those added before. It will also invoke ```translate``` method to translate the elements indicated in the new sheet.
+|Parameter|Datatype|Required|Default Value|Description|
+|------|------|------|------|------|
+|jsonArray|JSONArray|Yes|N/A|The JSONArray object of the sheet to be added.|
 
+***   
+```
+registerSelect(select)
+```
+Add a new select to the binding list. This select will also be able to control the global language and follow any changes.
+|Parameter|Datatype|Required|Default Value|Description|
+|------|------|------|------|------|
+|select|<code>Element</code>|Yes|N/A|The <code>Element</code> object of the select|
 
-
-
-
+## About Author
+Jianqing Gao <br>
+Contact: vip@jianqinggao.com
 
 
