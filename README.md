@@ -1,11 +1,11 @@
 # Multi-language.js
 A JS library for easily adding multiple languages to your site.  
-ZERO dependency!
+
 
 ## Why do I use this?
 1. Globalization is important for any websites. Don't let language barrier bounce your customers away!
-2. Fast, seamless experience. The light weight lightening-fast translator helps your website to win more likes! 
-3. One-click translate whole page in less than a second.
+2. Fast, seamless experience. The light weight ultra-fast translator helps your website to win more likes! 
+3. ZERO dependency!
 4. Easy to maintain. No more duplicating pages for different pages! The under development system for auto generating translation sheet will makes it even easier for you to maintain you site!
 5. Self controlled translation. Get rid of the uncertainty and inaccuracy from automatic translators! You define what's on your website for each language!
 6. Robost. Even if a step failed, your site content won't be affected!
