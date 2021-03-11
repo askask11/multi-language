@@ -7,7 +7,7 @@ To apply multi-language.js to your website/apps, you may either:
 ### Use a CDN service (recommended)
 Copy the code below and paste it inside your ```<head>``` element.
 ```
-<script src="https://cdn.jsdelivr.net/gh/askask11/multi-language@0.1.3/dist/multi-language.min.js" integrity="sha256-3p2C5uJwaOCmFwD0AGJwhaVH4awaPOYm/kKknZCb+Mo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/askask11/multi-language@0.1.4/dist/multi-language.min.js" integrity="sha256-3p2C5uJwaOCmFwD0AGJwhaVH4awaPOYm/kKknZCb+Mo=" crossorigin="anonymous"></script>
 ```
 OR  
 ### Serve it yourself
