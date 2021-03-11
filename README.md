@@ -11,7 +11,7 @@ ZERO dependency!
 6. Robost. Even if a step failed, your site content won't be affected!
 7. Deep Translating. You may even translate attributes of elements! In the future, you may even define actions when translating!
 8. Flexible language support, if you did not define a language for an element, a backup will be shown instead of leave it blank!
-9. Secure! SHA256 signed encryption helps your customers to keep away from MIMA(Main In the Middle Attack).
+9. Secure! SHA256 signed encryption helps your customers to keep away from MIMA(Man In the Middle Attack).
 10. Easy to learn. Look at our example page to get a quick start!
 11. Easy to use, flexible API enables you to define your own translator behaviors, or directly bind a combobox!
 12. The detailed documentation and support helps you to smash any problems you met! 
