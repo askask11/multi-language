@@ -281,6 +281,7 @@ xhr.onreadystatechange=(e)=>{
     translator.addSheet(jsonResponse);
   }
 }
+xhr.send()
 ```
 If you have written your translation sheet inside your HTML, you may follow this example
 ```
