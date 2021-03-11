@@ -1,13 +1,28 @@
 # Multi-language.js
 A JS library for easily adding multiple languages to your site.  
 ZERO dependency!
+
+## Why do I use this?
+1. Globalization is important for any websites. Don't let language barrier bounce your customers away!
+2. Fast, seamless experience. The light weight lightening-fast translator helps your website to win more likes! 
+3. One-click translate whole page in less than a second.
+4. Easy to maintain. No more duplicating pages for different pages! The under development system for auto generating translation sheet will makes it even easier for you to maintain you site!
+5. Self controlled translation. Get rid of the uncertainty and inaccuracy from automatic translators! You define what's on your website for each language!
+6. Robost. Even if a step failed, your site content won't be affected!
+7. Deep Translating. You may even translate attributes of elements! In the future, you may even define actions when translating!
+8. Flexible language support, if you did not define a language for an element, a backup will be shown instead of leave it blank!
+9. Secure! SHA256 signed encryption helps your customers to keep away from MIMA(Main In the Middle Attack).
+10. Easy to learn. Look at our example page to get a quick start!
+11. Easy to use, flexible API enables you to define your own translator behaviors, or directly bind a combobox!
+12. The detailed documentation and support helps you to smash any problems you met! 
+
 ## How To Install
 
 To apply multi-language.js to your website/apps, you may either:
 ### Use a CDN service (recommended)
 Copy the code below and paste it inside your ```<head>``` element.
 ```
-<script src="https://cdn.jsdelivr.net/gh/askask11/multi-language@0.1.4/dist/multi-language.min.js" integrity="sha256-3p2C5uJwaOCmFwD0AGJwhaVH4awaPOYm/kKknZCb+Mo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/askask11/multi-language@0.1.4/dist/multi-language.min.js" integrity="sha256-xL5PbSBwYLKYaUvdDP2S/lnF9s3oAPm/92GnACZBe2c=" crossorigin="anonymous"></script>
 ```
 OR  
 ### Serve it yourself
