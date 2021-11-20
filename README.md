@@ -3,18 +3,19 @@ A JS library for easily adding multiple languages to your site.
 
 
 ## Why do I use this?
-1. Globalization is important for any websites. Don't let language barrier bounce your customers away!
-2. Fast, seamless experience. The light weight ultra-fast translator helps your website to win more likes! 
+1. Globalization is important for any website. Don't let language barriers bounce your customers away!
+2. Fast, seamless experience. The lightweight, ultra-fast translator helps your website win more likes! 
 3. ZERO dependency!
-4. Easy to maintain. No more duplicating pages for different pages! The under development system for auto generating translation sheet will makes it even easier for you to maintain you site!
-5. Self controlled translation. Get rid of the uncertainty and inaccuracy from automatic translators! You define what's on your website for each language!
-6. Robost. Even if a step failed, your site content won't be affected!
+4. Easy to maintain. No more duplicating pages for different pages! The under-development system for auto-generating translation sheets will make it even easier for you to maintain your site!
+5. Self-controlled translation. Get rid of the uncertainty and inaccuracy from automatic translators! You define what's on your website for each language!
+6. Robust. Even if a step failed, your site content won't be affected!
 7. Deep Translating. You may even translate attributes of elements! In the future, you may even define actions when translating!
-8. Flexible language support, if you did not define a language for an element, a backup will be shown instead of leave it blank!
-9. Secure! SHA256 signed encryption helps your customers to keep away from MIMA(Man In the Middle Attack).
+8. Flexible language support, if you did not define a language for an element, a backup will be shown instead of leaving it blank!
+9. Secure! SHA256 signed encryption helps your customers to keep away from MIMA (Man In the Middle Attack).
 10. Easy to learn. Look at our example page to get a quick start!
 11. Easy to use, flexible API enables you to define your own translator behaviors, or directly bind a combobox!
-12. The detailed documentation and support helps you to smash any problems you met! 
+12. The detailed documentation and support helps you to smash any problems you meet! 
+Example: https://85vocab.com
 
 ## How To Install
 
