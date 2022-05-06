@@ -273,7 +273,7 @@ To load an external sheet file to the element, you can follow this example:
 var xhr = new XMLHttpRequest();  //Create an xhr instance
 var translator = new MultiLanguage(); // define translator, create a default instance
 
-xhr.open("***LINK TO YOUR SHEET.json***","***HTTP METHOD TO USE***"); // Define target file and HTTP method to use.
+xhr.open("***HTTP METHOD TO USE***","***LINK TO YOUR SHEET.json***"); // Define target file and HTTP method to use.
 
 xhr.onreadystatechange=(e)=>{
   if(xhr.readyState === 4 && xhr.status === 200)
